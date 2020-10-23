@@ -1,0 +1,6 @@
+[1011/152032.869:ERROR:settings.cc(430)] Settings version is not 5
+[1011/153033.092:ERROR:directory_reader_win.cc(43)] FindFirstFile: The system cannot find the path specified. (0x3)
+[1011/232237.349:ERROR:filesystem_win.cc(129)] GetFileAttributes C:\Users\Lonovo\AppData\Local\Microsoft\Edge\User Data\Crashpad\attachments\5b205325-1f1b-4f98-b85f-fbdc395cd7bb: The system cannot find the path specified. (0x3)
+[1013/163431.513:ERROR:directory_reader_win.cc(43)] FindFirstFile: The system cannot find the path specified. (0x3)
+[1015/001938.076:ERROR:directory_reader_win.cc(43)] FindFirstFile: The system cannot find the path specified. (0x3)
+[1022/124639.360:ERROR:directory_reader_win.cc(43)] FindFirstFile: The system cannot find the path specified. (0x3)

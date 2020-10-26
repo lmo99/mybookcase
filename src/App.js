@@ -9,6 +9,7 @@ import About from './pages/About';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 // my own CSS has to come after in order to override bootstrap
+import './assets/About.css';
 
 const App = (props) => {
 

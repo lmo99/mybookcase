@@ -1,0 +1,22 @@
+
+
+body {
+    background-color:plum;
+}
+
+header {
+    align-content: center;
+}
+h1 {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: rebeccapurple;
+    text-align: center;
+}
+
+h2 {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: rebeccapurple;
+    font-size: smaller;
+    text-align: center;
+}
+

@@ -42,7 +42,7 @@ const App = (props) => {
       <BrowserRouter>
         <Route exact path="/" render={() => (
           <>
-            <Header />
+            <Header bookcaseList={bookcaseList} />
             <Search findBooks={findBooks} keyword={keyword} setKeyword={setKeyword} />
             <BookList books={books} addBook={addBook} />
            
@@ -51,7 +51,7 @@ const App = (props) => {
         
         <Route path="/bookcase" render={() => (
           <>
-            <Header />
+            <Header bookcaseList={bookcaseList} />
             Bookcase
             {bookcaseList.map(book => (
               <div>
@@ -63,7 +63,7 @@ const App = (props) => {
 
         <Route path="/about" render={() => (
           <>
-            <Header />
+            <Header bookcaseList={bookcaseList} />
             <About />
           </>
         )} />

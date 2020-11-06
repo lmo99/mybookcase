@@ -30,11 +30,14 @@ const App = (props) => {
 
   function addBook(book) {
     setBookcaseList(bookcaseList => [...bookcaseList, book]);
+    const newBooks = books.filter(item => item.id !== book.id)
+    setBooks(newBooks);
   }
 
   function removeBook(book) {
     const newBookcaseList = bookcaseList.filter(item => item.id !== book.id)
     setBookcaseList(newBookcaseList);
+    setBooks(books => [...books, book]);
   }
 
   if (books.length === 0){

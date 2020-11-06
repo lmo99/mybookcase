@@ -27,9 +27,7 @@ return (
      {/* <h3>{authors.length === 1 ? authors[0] : authors.join(', ')} */}
      <p>{renderAmount()}</p>
      <p>{description}</p>
-     {props.button}
-     {/* line 30 may be unnecessary or need to figure out why theres not two buttons */}
-     <button onClick={() => props.buttonFunction(props.book)}>Add +</button>
+     <button onClick={() => props.buttonFunction(props.book)}>{props.buttonText}</button>
     </div>
    );
  }

@@ -32,8 +32,9 @@ const App = (props) => {
     setBookcaseList(bookcaseList => [...bookcaseList, book]);
   }
 
-  function addBookButton() {
-    return <button onClick={() => props.addBook(props.book)}>Add +</button>
+  function removeBook(book) {
+    const newBookcaseList = bookcaseList.filter(item => item.id !== book.id)
+    setBookcaseList(newBookcaseList);
   }
 
   if (books.length === 0){
@@ -47,7 +48,7 @@ const App = (props) => {
           <>
             <Header bookcaseList={bookcaseList} />
             <Search findBooks={findBooks} keyword={keyword} setKeyword={setKeyword} />
-            <BookList books={books} buttonFunction={addBook} button={addBookButton} />
+            <BookList books={books} buttonFunction={addBook} buttonText="Add +"/>
            
           </>
         )} />
@@ -56,7 +57,7 @@ const App = (props) => {
           <>
             <Header bookcaseList={bookcaseList} />
             Bookcase
-            <BookList books={bookcaseList} addBook={addBook} />
+            <BookList books={bookcaseList} buttonFunction={removeBook} buttonText="Remove -"/>
           </>
         )} />
 

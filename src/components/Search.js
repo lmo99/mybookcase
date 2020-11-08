@@ -10,17 +10,17 @@ const Search = (props) => {
         };
     
     return (
-    <form onSubmit={handleSubmit}>
-        <h1>{props.keyword && 'Searching for keyword: ' + props.keyword }</h1>
-        <input 
-            type="text" 
-            value={props.keyword} 
-            onChange={(e) =>{props.setKeyword(e.target.value)}} 
-        />
-        <Button type="submit">
-          Submit
-        </Button>
-    </form>
+        <Form onSubmit={handleSubmit}>
+            <h1>{props.keyword && 'Searching for keyword: ' + props.keyword }</h1>
+            <input 
+                type="text" 
+                value={props.keyword} 
+                onChange={(e) =>{props.setKeyword(e.target.value)}} 
+            />
+            <Button type="submit">
+            Submit
+            </Button>
+        </Form>
     
     );
 };

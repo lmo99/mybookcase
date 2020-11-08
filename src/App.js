@@ -59,7 +59,7 @@ const App = (props) => {
         <Route path="/bookcase" render={() => (
           <>
             <Header bookcaseList={bookcaseList} />
-            Bookcase
+            <h3>ADDED BOOKS</h3>
             <BookList books={bookcaseList} buttonFunction={removeBook} buttonText="Remove -"/>
           </>
         )} />

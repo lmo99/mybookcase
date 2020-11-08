@@ -1,22 +1,49 @@
 
 
 body {
-    background-color:plum;
+    background-color: wheat;
 }
 
 header {
     align-content: center;
 }
 h1 {
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    color: rebeccapurple;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color:purple;
     text-align: center;
 }
 
 h2 {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    color: rebeccapurple;
+    color:purple;
+    font-size: medium;
+    text-align: center;
+}
+
+h3 {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: purple;
+    text-align: center;
+}
+
+p {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: purple;
     font-size: smaller;
+    text-align: center;
+}
+
+button {
+    background-color:purple;
+    color:wheat;
+    padding:12px 20px;
+    border:none;
+    border-radius:28px;
+    cursor:pointer;
+    align-self: center;
+}
+
+img {
     text-align: center;
 }
 

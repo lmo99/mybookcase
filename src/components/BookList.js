@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { Pagination } from 'react-bootstrap';
 import Book from './Book';
 
 const BookList = (props) => {
@@ -6,20 +7,28 @@ const BookList = (props) => {
     const itemsPerPage = 5
     const numberOfPages = bookListLength / itemsPerPage
 
-    // IN THE PROCESS OF PAGINATING- COMMENTED OUT TO NOT BREAK MY CODE!
-    //const slicedBookList = []
-    // for(let i = 0; i < numberOfPages; i++) {
-    //     slicedBookList.push(props.books.slice(0, itemsPerPage))
-    //     props.books.splice(0, itemsPerPage)
-    //     console.log(i)
-    //     console.log(slicedBookList)
-    //     console.log(props.books)
-    // }
+    const slicedBookList = []
+    for(let i = 0; i < numberOfPages; i++) {
+        slicedBookList.push(props.books.slice(0, itemsPerPage))
+        props.books.splice(0, itemsPerPage)
+    }
     
+    const [pageNumber, setPageNumber] = useState(0);
+    let active = 2;
+    let items = [];
+    for (let number = 1; number <= 5; number++) {
+        items.push(
+            <Pagination.Item key={number} active={number === active}>
+                {number}
+            </Pagination.Item>
+        );
+    }
 
     return (
         <div>
-            {props.books.map(book => <Book key={book.id} book={book} buttonFunction={props.buttonFunction} buttonText={props.buttonText}/>)}
+            <Pagination>{items}</Pagination>
+        {/* // page number not working */}
+            {slicedBookList[pageNumber].map(book => <Book key={book.id} book={book} buttonFunction={props.buttonFunction} buttonText={props.buttonText}/>)}
         </div>
     );
 };

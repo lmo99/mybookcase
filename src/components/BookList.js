@@ -8,13 +8,12 @@ const BookList = (props) => {
     const numberOfPages = bookListLength / itemsPerPage
 
     const slicedBookList = []
-    for(let i = 0; i < numberOfPages; i++) {
-        slicedBookList.push(props.books.slice(0, itemsPerPage))
-        props.books.splice(0, itemsPerPage)
+    for(let i = 0; i < bookListLength; i+=5) {
+        slicedBookList.push(props.books.slice(i, itemsPerPage))
+
     }
-    
     const [pageNumber, setPageNumber] = useState(0);
-    let active = 2;
+    let active = pageNumber+1;
     let items = [];
     for (let number = 1; number <= 5; number++) {
         items.push(
@@ -28,7 +27,8 @@ const BookList = (props) => {
         <div>
             <Pagination>{items}</Pagination>
         {/* // page number not working */}
-            {slicedBookList[pageNumber].map(book => <Book key={book.id} book={book} buttonFunction={props.buttonFunction} buttonText={props.buttonText}/>)}
+        {console.log(slicedBookList)}
+            {slicedBookList[0].map(book => <Book key={book.id} book={book} buttonFunction={props.buttonFunction} buttonText={props.buttonText}/>)}
         </div>
     );
 };
